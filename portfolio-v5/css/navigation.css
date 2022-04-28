@@ -1,0 +1,104 @@
+/* CSS for Navigation */
+/* NOTE: Navigation for screens 992px and below- see navigation.css for colors in breakpoint (all other colors in main.css)  */
+/* ===============
+   GLOBAL STYLES 
+   =============== */
+body {
+    overflow-x: hidden;
+}
+/* Class allows elements to be hidden visually but present for assistive tech */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+/* ===============
+   WRAPPERS 
+   =============== */
+.nav-wrapper-container {
+    width: 80%;    /* nav elements will occupy 80% of the viewport */
+    margin: auto;  /* nav elements are auto-centered (10% on each side) */ 
+    display: flex; /* flex container allows nav logo and nav a elements to be placed side by side */
+    align-items: center; /* nav logo and nav a elements centered on y-axis */
+    justify-content: space-between; /* creates space between nav logo and nav a elements */
+}
+/* ===============
+   NAVIGATION
+   =============== */
+.mobile-nav-toggle {/* mobile nav hamburger button not displayed outside of screens 992 and below */   
+    display: none;
+}
+.primary-navigation {/* ul that holds nav li and a elements */
+    display: flex;  /* flexbox is used to display nav elements horizontally */
+    gap: 3rem;      /* 3 rem gap between nav elements */      
+}
+.primary-navigation-a {/* 3.2px top and bottom, 6.4px left and right padding added to nav a elements */
+    padding: 0.2rem 0.4rem;
+}
+#nav-logo {/* id for site logo */
+    margin: 1rem 1rem 1rem 0rem;
+}
+/* ===============
+   MEDIA QUERIES
+   =============== */
+
+@media only screen and (max-width: 1020px) and (min-width: 993px)  {
+
+    .primary-navigation {/* to prevent nav a elements from crowding nav logo, gap is reduced to 2rem from 3rem */
+        gap: 2rem;
+    }
+}
+/* For screen sizes 992 px and below */
+@media (max-width: 992px) {
+    a.primary-navigation-a:hover {/* no nav hover effect on mobile */ 
+        border-bottom: none;
+    }
+    header {
+        background-color: #0F0F10;
+    }
+    nav {
+        width: 100%; 
+    }
+    .primary-navigation {
+        margin-right: 0rem;
+        position: fixed;
+        inset: 0 0 0 30%;
+        z-index: 1000;                            /*  z-index sets stacking order */              
+        flex-direction: column;
+        gap: 2rem;
+        padding: 10rem 4rem;
+        background: hsla(240, 5%, 8%, .95);     /* hue, saturation, lightness, alpha (color transparency) - note: alpha can be a number 0 to 1. 0 is fully transparent. 1 is fully opaque. 0.5 is 50% transparent  */ 
+        color: #F1E9E9;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+    /* Navigation Font Size for screens 992 and below*/
+        .primary-navigation {
+        font-size: 1.25rem;              /* font-size - navigation font size */           
+        font-weight: 400;               /* font-weight - navigation font weight */
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;              /*  z-index sets stacking order */
+        width: 2rem;
+        aspect-ratio: 1/1;            /*  aspect-ratio of 1 keeps height and width the same */
+        background-color: transparent;     
+        background-image: url("../images/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        border: 0;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("../images/icon-close.svg");
+    }
+}

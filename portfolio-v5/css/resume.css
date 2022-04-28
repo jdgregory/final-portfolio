@@ -1,0 +1,207 @@
+/* CSS for Resume */
+/* ===============
+    * WRAPPERS
+   =============== */
+   .resume-section-wrapper { /* displays eerie black (#1d1d20) background color at 100% of screen width */
+       width: 100%;
+   }
+   .resume-text-wrapper { /* sits inside .resume-section-wrapper and controls width of resume content */
+       width: 95%;
+       margin: auto;
+   }
+
+/* ===============
+   * Resume
+   =============== */
+/* NOTE: Resume section is divided into 4 subsections: Work Experience, Skills, Education, and Download Section */
+
+/* The following styles apply to all 4 subsections: */
+
+#resume {/* resume section - left and right padding */
+    padding: 0 1rem 0 1rem; 
+}
+#resume-h2 {/* h2, main heading for resume section */
+    width: 100%;
+}
+.resume-container-h3-headings {/* flex parent - div for h3s and their icons */ 
+    display: flex; 
+}
+.resume-img-headings {/* Icons for Work Experience, Skills, Education, Download */
+    width: 1.875rem;
+    margin-right: 0.5rem;
+}
+.div-vertline-3lines {/* div that is flex parent - holds .vertical-line and 3 lines of text */
+    display: flex;
+}
+.vertical-line {/* vertical line placed beside of job descriptions, degrees */
+    border-left: 4px solid #6200b3;
+    min-height: 2.813rem; /* min-height gives the line an initial height but line will grow as tall as sibling */
+    margin-right: 0.5rem;
+}
+
+/* Work Experience Subsection */
+.indent {/* indents job summary and "key responsibilities" so they're aligned with other text */
+    margin-left: .8rem;
+}
+.indent-2 {/* indents bulleted list of job responsibilities */
+    margin-left: 2rem;
+}
+.spacer-jobs {/* adds margin to the bottom of first job to separate it from second job */
+    margin-bottom: 1.25rem;
+}
+.spacer-jobs-summary {/* adds margin to the bottom and top of jobs summary */
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+/* Skills Subsection */
+.skills {/* adds margin to the top and bottom of skills section to separate it from jobs and education sections */
+    margin: 1.25rem 0 1.25rem 0;
+}
+.resume-container-skill-li {/* flex parent (applied to li elements) - contains .resume-img-skills (which are icons for skills) */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+.resume-img-skills {/* flex child - Icons for Skills */
+    width: 2rem;
+    margin-right: 0.25rem;
+}
+.skills-cols { /* creates css grid container that holds li elements (.resume-container-skill-li) */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 0.313rem; 
+}
+
+#skill-font-li { /* fix for "adobe creative suite" - all 3 words appear on one line */
+    white-space: nowrap;
+    font-size: 0.813rem;
+}
+
+/* Education Subsection */
+.spacer-education {/* adds margin to the bottom of first degree to separate it from second degree */
+    margin-bottom: 1.25rem;
+}
+/* Download Subsection */
+.downloads { /* div container that holds entire downloads section */
+    margin: 1rem 0; /* top and bottom margin separate downloads subsection from education and bottom of resume section */
+}
+#resume-download-arrow { /* fix that aligns download arrow image with .resume-download-img (file type images) */
+    width: 2rem; /* sets download arrow icon width to 2rem */
+    margin-right: 0.25rem; /* puts space between text and icon */
+    margin-left: 0.45rem; /* fix that nudges icon to the right to align it with icons below it */
+}
+.resume-download-div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+/* NOTE: this is a confusing setup- read carefully
+.resume-download-a is styled to look like a button
+.resume-download-a is a flexbox parent container. it contains .resume-download-img (file type icons img).
+the link states and colors for .resume-download-a are in main.css
+all other styles for .resume-download-a are located below  */
+.resume-download-a {
+    display: flex; /* creates flexbox parent container */
+    flex-direction: row-reverse; /* allows .resume-download-img to appear in front of .resume-download-a */
+    align-items: center; /* centers .resume-download-a with .resume-download-img along x-axis */
+    margin-right: auto; /* aligns .resume-download-a to the left of the container  */
+    margin-top: 0.5em; /* adds margin-top to separate download "buttons" from one another */
+    margin-bottom: 0.5rem; /* adds margin-bottom to separate download "buttons" from one another */
+    padding: 0.5rem 0.7rem 0.5rem 0; /* adds padding to make element look more like a button */
+}
+.resume-download-img {
+    width: 3rem;
+    margin-right: 0.25rem;
+}
+#resume-download-a-docx {
+    /* !EMPTY */
+}
+
+/* *=================================================================================================================================================================  */
+
+/* ===============
+   * Breakpoints
+   =============== */
+
+/* *Default screen size for design is extra small screens between 320 and 575 pixels wide */
+/* **Breakpoint 1** */
+/* Small devices (landscape phones, 576px and up) [between 576-767 pixels] */
+@media (min-width: 576px) {
+
+    #skill-font-li { /* fix for "adobe creative suite" - makes font size equal to the font around it */
+        font-size: 1.063rem;
+    }
+    #resume-download-arrow { /* overrides fix that aligns download arrow image with .resume-download-img (file type images) */
+        margin-left: 0;
+    }
+
+} /* *end breakpoint 1 */
+
+/* **Breakpoint 2** */   
+/* Medium devices (tablets, 768px and up) [between 768-991 pixels] */
+   @media (min-width: 768px) {
+
+    /* ! EMPTY */
+    
+} /* *end breakpoint 2 */
+
+/* **Breakpoint 3** */     
+/* Large devices (desktops, 992px and up) [between 992-1199 pixels] */
+   @media (min-width: 992px) { 
+
+    #h3-download-fix { /* fix for "download my resume" h3 - reduces font size so heading doesn't wrap */
+        font-size: 1.375rem; 
+    }
+    /* On screen sizes 992px and up, resume section headings (work experience, skills, education) are placed to the left of the "stuff" in the sections.*/
+    .resume-sections-col-container {/* flex parent - holds .resume-sections-leftcol and .resume-sections-rightcol */
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .resume-sections-leftcol { /* 1st flex child of .resume-sections-col-container */
+        width: 30%;
+    }
+    .resume-sections-rightcol { /* 2nd flex child of .resume-sections-col-container */
+        width: 70%;
+    }
+
+    #skill-font-li { /* makes "adobe creative cloud" font size smaller - fixes issue with text wrapping and making grid row too tall */
+        font-size: 1rem;
+    }
+
+    /* on screen sizes 992px and up, the skills in the skills section go from 2 columns and 3 rows to 3 columns and 2 rows using CSS grid */
+    .skills-cols {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 0.313rem; 
+    }
+    /* on screen sizes 992px and up, the download "buttons" are displayed in a row instead of a column */
+    .resume-download-div {
+        flex-direction: row;
+    }
+
+} /* *end breakpoint 3 */
+
+/* **Breakpoint 4** */  
+/* X-Large devices (large desktops, 1200px and up) [between 1200-1399 pixels] */
+   @media (min-width: 1200px) {
+
+    #skill-font-li { /* reverses fix applied in breakpoint 3. makes "adobe creative cloud" font size the size of surrounding text */
+        font-size: 1.25rem;
+    }
+    #h3-download-fix { /*  reverses fix for "download my resume" h3 - reduces font size so heading doesn't wrap */
+        font-size: 1.688rem; 
+    }
+
+
+} /* *end breakpoint 4 */
+
+/* **Breakpoint 5** */     
+/* XX-Large devices (larger desktops, 1400px and up) */
+   @media (min-width: 1400px) {
+
+    /* ! EMPTY */ 
+    
+} /* *end breakpoint 5 */

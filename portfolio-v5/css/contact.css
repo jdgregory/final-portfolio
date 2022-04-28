@@ -1,0 +1,157 @@
+/* CSS for Contact Section */
+/* ===============
+    * WRAPPERS
+   =============== */
+.contact-section-wrapper {
+    width: 90%;
+    padding: 1rem 0.938rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===============
+   * Contact Section
+   =============== */
+.contact-h2 {
+    margin: 0 0 4rem 0;
+    text-align: center;
+}
+/* flexbox container for contact section - allows left and right columns to sit beside one another */ 
+.contact-flex-container { 
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;                     
+}
+/* container that holds gradient background and social links/icons */
+.contact-left-column {
+    background-size: cover;
+    background-image: url("../images/background.png");
+    padding: 1rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.contact-leftcol-ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.contact-leftcol-li, .contact-leftcol-a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .15rem;
+}
+.contact-leftcol-icons {
+    padding: 0 .25rem;
+}
+
+
+/* container that holds contact form */
+.contact-right-column{
+    padding: 2rem 1rem;
+}
+/* Send Me a Message! Heading */
+.contact-rheading {
+    margin: 0.04rem 0 0.08rem 1rem;
+}
+/* class applied to form ul element - creates flex container - li elements become flex children  */
+.form-list-container {                              
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.06rem 0.02rem;
+}
+/* class applied to li elements - creates flex container - label and input elements become flex children */ 
+.form-list-items {                                 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+    padding: 0 0.04rem;
+}
+/* label for fields that accept user input */
+.contact-label {
+    width: 100%;
+    margin: auto;
+}
+/* fields that accept user input */
+.contact-input {
+    border-radius: 0.188rem;
+    padding: 0.02rem;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(98, 0, 179, 0.1);
+}
+/* "Type your message here" label */
+label[class="block"] {
+    margin: 0.03rem 0 0 0;
+}
+/* field for "Type your Message here" */
+textarea {
+    border-radius: 0.188rem; 
+}
+/* NOTE: color styles for .button are in main.css */
+.button {                                   /* button for contact form */
+    margin-top: 2rem; /* adds space to top of button to separate it from other form elements */
+}
+.li-for-button { /* centers button */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* *=================================================================================================================================================================  */
+
+/* ===============
+   * Breakpoints
+   =============== */
+
+/* *Default screen size for design is extra small screens between 320 and 575 pixels wide */
+/* **Breakpoint 1** */
+/* Small devices (landscape phones, 576px and up) [between 576-767 pixels] */
+@media (min-width: 576px) {
+
+    /* ! EMPTY */
+
+} /* *end breakpoint 1 */
+
+/* **Breakpoint 2** */   
+/* Medium devices (tablets, 768px and up) [between 768-991 pixels] */
+   @media (min-width: 768px) {
+
+    .contact-flex-container { 
+        flex-direction: row;                   
+    }
+    .contact-leftcol-a {
+        margin: .25rem 0;
+    }
+    .contact-leftcol-ul {
+        justify-content: flex-end;
+    }    
+    
+} /* *end breakpoint 2 */
+
+/* **Breakpoint 3** */     
+/* Large devices (desktops, 992px and up) [between 992-1199 pixels] */
+   @media (min-width: 992px) {
+
+    /* ! EMPTY */
+
+} /* *end breakpoint 3 */
+
+/* **Breakpoint 4** */  
+/* X-Large devices (large desktops, 1200px and up) [between 1200-1399 pixels] */
+   @media (min-width: 1200px) {
+
+    /* ! EMPTY */
+
+} /* *end breakpoint 4 */
+
+/* **Breakpoint 5** */     
+/* XX-Large devices (larger desktops, 1400px and up) */
+   @media (min-width: 1400px) {
+
+    /* ! EMPTY */ 
+
+} /* *end breakpoint 5 */

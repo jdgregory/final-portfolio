@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jennifer Gregory">
+        <meta name="description" content="Portfolio for web development student with experience in web design, web design, and graphic design">
+        <title>Jennifer Gregory | Web Design & Development</title>
+        <!-- Links -->
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/projects.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/resume.css">
+        <link rel="stylesheet" href="css/blog.css">  
+        <link rel="stylesheet" href="css/footer.css">
+        <!-- Scripts -->
+        <script src="js/nav.js" defer></script> <!-- ? defer is a boolean attribute that tells the browser to load the script after the html page has been parsed -->
+    </head>
+
+    <body>
+        <header> <!-- * HEADER -->
+            <div class="nav-wrapper-container"> <!-- ^ nav-wrapper -->
+                <div><!-- * div container for nav-logo -->
+                    <a href="index.html">
+                        <img id="nav-logo" src="images/mini-logo-nv5.png" alt="site logo" height="60">
+                    </a>
+                </div>
+
+                <!--  * Button that toggles mobile menu -->
+                <!-- ? aria-controls="primary-navigation" lets screen reader know that button controls ul with class of "primary-navigation" -->
+                <!-- ? aria-expanded="false" - by default, when page loads, mobile menu will not be expanded, so value is false.  (when user toggles mobile menu, value will change to "true")-->
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <!-- Reads "Menu" for screen-readers to provide context for close icon -->
+                    <span class="sr-only">Menu</span>
+                </button>
+
+                <nav id="main-navigation"> <!-- * Primary Navigation -->
+                    <ul id="primary-navigation" data-visible="false" class="primary-navigation no-bullet">
+                        <li class="active">
+                            <a class="primary-navigation-a" href="#about-link">About</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#projects-link">Projects</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#contact-link">Contact</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#resume-link">Resume</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#blog-link" target="_blank">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div><!-- end "nav-wrapper-container" class --> <!-- ^ END nav-wrapper --> 
+        </header>
+
+        <main><!-- * MAIN -->
+            <div class="about-section-wrapper">
+                <section id="about"><!-- * About Section -->
+                    <a id="about-link"></a>
+                    <div class="about-right-column">
+
+                        <picture>
+                            <source media="(max-width: 575px)" srcset="images/about-purple-200w.jpg">
+                            <source media="(min-width: 576px)" srcset="images/about-purple-300w.jpg">
+                            <source media="(min-width: 1200px)" srcset="images/about-purple-400.jpg">
+                            <img src="images/about-purple-200w.jpg" alt="headshot image of Jennifer Gregory">
+                        </picture>
+                          
+                    </div>
+                    <div class="about-left-column">
+                        <div class="mobile-centering">
+                            <h1 id="about-h1">About</h1>
+                            <p id="about-p">Hi, my name is Jennifer Gregory! I'm a web development student at Wake Technical Community College. I have experience in web development, web design, and graphic and print design. I enjoy web design and development because there's always something new to learn!</p>
+                        </div>
+                        <ul class="no-bullet about-icons">
+                            <li>
+                                <a class="contact-link" href="mailto:jdgregory@my.waketech.edu" target="_blank">
+                                    <img class="about-contact-icons" src="images/envelope-white.svg" alt="email icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://www.linkedin.com/in/jennifer-g-07536a192/" target="_blank">
+                                    <img class="about-contact-icons" src="images/linkedin-white.svg" alt="linkedin logo in white">
+                                    <!-- TODO 
+                                    <img class="about-contact-icons icon-hover-change" src="images/linkedin-fandango.svg" alt="linkedin logo in fandango">-->
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                                    <img class="about-contact-icons" src="images/twitter.svg" alt="twitter logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://github.com/jdgregory" target="_blank">
+                                    <img class="about-contact-icons" src="images/github.svg" alt="github logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section> <!-- END About Section -->
+            </div>
+
+            <div class="project-section-wrapper"> <!-- project-section-wrapper-->
+                
+                <div class="shape-divider-top-1"> <!-- shape-divider-top-1-->
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                    </svg>
+                </div> <!-- END shape-divider-top-1 -->
+                
+                <section id="projects"><!-- * Projects Section -->
+                    <a id="projects-link"></a>
+                    <h2 id="projects-h2">Featured Projects</h2>
+
+                    <div class="project-main-grid-wrapper"> <!-- project-main-grid-wrapper-->
+
+                        <div class="project-main-grid-container"> <!-- project-main-grid-container-->
+
+                            <!-- Project Item 1 -->
+                            <div id="proj-item-1" class="project-card-grid">
+                                <div class="project-image">
+                                    <img class="project-image-padding" src="images/high-country-beverages.png" width="325" height="325" alt="high country beverages brewery logo">
+                                </div>
+                                <div class="project-text-container">
+                                    <h3 class="project-text-heading">Brewery Logo</h3>
+                                    <p class="project-text">Created with Adobe Illustrator, this logo is for a brewery located in Blowing Rock, NC. This design is for an apple-infused beverage that the brewery serves in environmentally-friendly recycled glass bottles.</p>
+                                </div>
+                            </div>
+
+                            <!-- Project Item 2 -->
+                            <div id="proj-item-2" class="project-card-grid">
+                                <div class="project-image">
+                                    <img src="images/EuroHello-logo.png" width="325" height="325" alt="graphic of airplane flying upward beside of logo for EuroHello Travel Agency">
+                                </div>
+                                <div class="project-text-container">
+                                    <h3 class="project-text-heading">Travel Agency Logo</h3>
+                                    <p class="project-text">This logo was created for EuroHello, a travel agency that specializes in planning European vacations. It was created using Adobe Illustrator.</p>
+                                </div>
+                            </div>
+
+                            <!-- Project Item 3 -->
+                            <div id="proj-item-3" class="project-card-grid">
+                                <div class="project-image">
+                                    <img src="images/stokes.png" width="325" height="325" alt="stokes county website creating with material design bootstrap">
+                                </div>
+                                <div class="project-text-container">
+                                    <h3 class="project-text-heading">Stokes County Website</h3>
+                                    <p class="project-text">This project is a redesign of Stokes County's website. It was created using Material Design for Bootstrap, a version of Bootstrap that is styled like Material Design.</p>
+                                </div>
+                                <div class="view-link-container">
+                                    <img class="project-open-icon" src="images/open-blue.png" width="25" height="25" alt="icon that indicates pop-up">
+                                    <a class="open-link" href="https://wcet3.waketech.edu/jgregory/WEB287/Stokes/index.html" target="_blank">View full website</a> 
+                                </div>
+                            </div>
+
+                            <!-- Project Item 4 -->
+                            <div id="proj-item-4" class="project-card-grid">
+                                <div class="project-image">
+                                    <img src="images/biltmore.png" width="325" height="325" alt="app created to help visitors tour the Biltmore House">
+                                </div>
+                                <div class="project-text-container">
+                                    <h3 class="project-text-heading">Biltmore Companion Website</h3>
+                                    <p class="project-text">This companion website to Biltmore Estate's official website can be used by visitors to find out more information about their surroundings. It was created using a version of Bootstrap that is styled like Material Design.</p>
+                                </div>
+                                <div class="view-link-container">
+                                    <img class="project-open-icon" src="images/open-blue.png" width="25" height="25" alt="icon that indicates pop-up">
+                                    <a class="open-link" href="https://wcet3.waketech.edu/jgregory/WEB287/Biltmore/index.html" target="_blank">View full website</a> 
+                                </div>
+                            </div>
+
+                        </div> <!-- END project-main-grid-container-->
+
+                    </div> <!-- END project-main-grid-wrapper-->
+
+                </section><!-- END Projects Section -->
+
+                <div class="shape-divider-top-2"> <!-- shape-divider-top-2-->
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                    </svg>
+                </div> <!-- end shape-divider-top-2-->
+
+            </div> <!-- END project-section-wrapper-->
+
+            <div class="contact-section-wrapper"> <!-- contact-section-wrapper-->
+                <section id="contact"> <!-- * Contact Section -->
+                    <a id="contact-link"></a>
+                    <h2 class="contact-h2">Contact Me</h2>
+                    <div class="contact-flex-container"> <!-- contact flexbox container -->
+                        <div class="contact-left-column">
+                            <ul class="contact-leftcol-ul no-bullet">
+                                <li>Contact Information</li>
+                                <li class="contact-leftcol-li">
+                                    <a class="contact-leftcol-a" href="mailto:jdgregory@my.waketech.edu" target="_blank">
+                                        <img class="contact-leftcol-icons" src="images/envelope.png" alt="email icon">
+                                        jdgregory@my.waketech.edu
+                                    </a>
+                                </li>
+                                <li class="contact-leftcol-li">
+                                    <a class="contact-leftcol-a" href="https://www.linkedin.com/in/jennifer-g-07536a192/" target="_blank">
+                                        <img class="contact-leftcol-icons" src="images/linkedin.svg" alt="linkedin logo">
+                                        Jennifer Gregory
+                                    </a>
+                                </li>
+                                <li class="contact-leftcol-li">
+                                    <a class="contact-leftcol-a" href="https://twitter.com/jennife41447182" target="_blank">
+                                        <img class="contact-leftcol-icons" src="images/twitter.svg" alt="twitter logo">
+                                        jennife41447182
+                                    </a>
+                                </li>
+                                <li class="contact-leftcol-li">
+                                    <a class="contact-leftcol-a" href="https://github.com/jdgregory" target="_blank">
+                                        <img class="contact-leftcol-icons" src="images/github.svg" alt="github logo">
+                                        jdgregory
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                        </div>
+                        <div class="contact-right-column">
+                            <h3 class="contact-rheading">Send Me a Message!</h3>
+                            <form>
+                                <ul class="form-list-container no-bullet">
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="f-name">First Name</label>
+                                        <input class="contact-input" type="text" name="f-name" id="f-name">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="l-name">Last Name</label>
+                                        <input class="contact-input" type="text" name="l-name" id="l-name">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="email">Email</label>
+                                        <input class="contact-input" type="text" name="email" id="email">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="phone">Phone</label>
+                                        <input class="contact-input" type="text" name="phone" id="phone">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="block" for="message">Type your message here</label>
+                                        <textarea rows="5" cols="50" name="message" id="message"></textarea>
+                                    </li>
+                                    <li class="li-for-button">
+                                        <button class="button" type="submit" value="Submit">Submit</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        
+                        </div>   
+                    </div>
+
+                </section><!-- END Contact Section -->
+            </div> <!-- END contact-section-wrapper-->
+
+            <div class="resume-section-wrapper"> <!-- resume-section-wrapper-->
+
+                <div class="resume-text-wrapper"> <!-- resume-text-wrapper-->
+
+                    <section id="resume"><!-- * Resume Section -->
+                        <a id="resume-link"></a>
+                        <h2 id="resume-h2">Resume</h2>
+                        <div class="resume-sections-col-container">
+                            <div class="resume-sections-leftcol">
+
+                                <div class="resume-container-h3-headings">
+                                    <img class="resume-img-headings" src="images/work.svg" alt="briefcase icon">
+                                    <h3 id="work-experience-h3">Work Experience</h3>
+                                </div>
+                            </div>
+
+                            <div class="resume-sections-rightcol">
+                                <div class="spacer-jobs"> <!-- First Job -->
+                                    <div class="div-vertline-3lines">
+                                        <div class="vertical-line"></div>
+                                        <ul>
+                                            <li class="no-bullet bold resume-li">Tutor</li>
+                                            <li class="no-bullet italic resume-li">Self-Employed</li>
+                                            <li class="no-bullet resume-li">June 2014 - Present</li>
+                                        </ul>
+                                    </div>
+                                    <ul>
+                                        <li class="no-bullet resume-li spacer-jobs-summary indent">Provides reading and writing tutoring to elementary and middle school-aged students</li>
+                                        <li class="no-bullet bold resume-li indent">Key Responsibilities:</li>
+                                        <li class="resume-li indent-2">Utilizes Orton-Gillingham Evidence-Based Reading Instruction.</li>
+                                        <li class="resume-li indent-2" >Completes initial assessments of students' reading and writing abilities.</li>
+                                        <li class="resume-li indent-2">Uses initial assessments to develop lesson plans to improve reading and writing skills.</li>
+                                        <li class="resume-li indent-2">Conducts weekly tests to measure skill acquisition and adjust lesson plans accordingly.</li>
+                                        <li class="resume-li indent-2">Creates lesson plans that utilize movement, music, art, and technology.</li>
+                                        <li class="resume-li indent-2">Teaches basic writing skills, such as capitalization, spelling, grammar, and handwriting.</li>
+                                        <li class="resume-li indent-2">Teaches basic reading skills, such as phonemic awareness, reading fluency and accuracy, vocabulary development, and comprehension skills.</li>
+                                    </ul>
+                                </div> <!-- END First Job -->
+
+                                <div> <!-- Second Job -->
+                                    <div class="div-vertline-3lines">
+                                        <div class="vertical-line"></div>
+                                        <ul>
+                                            <li class="no-bullet bold resume-li">Nanny</li>
+                                            <li class="no-bullet italic resume-li">Private Family</li>
+                                            <li class="no-bullet resume-li">August 2011 - May 2014</li>
+                                        </ul>
+                                    </div>
+                                    <ul>
+                                        <li class="no-bullet resume-li spacer-jobs-summary indent">Provided daily care for two children, ages 2 and 4. At the end of my employment, the children were 4 and 7.</li>
+                                        <li class="no-bullet bold resume-li indent">Key Responsibilities:</li>
+                                        <li class="resume-li indent-2">Prepared meals and performed light housekeeping.</li>
+                                        <li class="resume-li indent-2">Transported children to school, sports, and other activities.</li>
+                                        <li class="resume-li indent-2">Created age-appropriate lessons and activities that encouraged emotional and academic growth. </li>
+                                        <li class="resume-li indent-2">Completed errands, such as shopping for groceries and picking up dry cleaning.</li>
+                                    </ul>
+                                </div><!-- END Second Job -->
+                            </div>    
+                        </div>
+
+                        <div class="skills"> <!-- Skills Section -->
+                            
+                            <div class="resume-sections-col-container"> <!-- begin resume-sections-col-container for skills - flex parent -->
+
+                                <div class="resume-sections-leftcol"> <!-- resume-sections-leftcol - flex child 1 -->
+                                    <div class="resume-container-h3-headings"> <!-- resume-container-h3-headings - flex parent-->
+                                        <img class="resume-img-headings" src="images/gear.svg" alt="gear icon"> <!-- resume-img-headings - flex child 1 -->
+                                        <h3>Skills</h3> <!-- h3 - flex child 2 -->
+                                    </div> <!-- END resume-container-h3-headings - flex parent -->
+                                </div> <!-- END resume-sections-leftcol - flex child 1 -->
+
+                                <div class="resume-sections-rightcol"> <!-- resume-sections-rightcol - flex child 2 -->
+
+                                    <ul class="skills-cols"> <!-- begin - skills-cols - css grid -->
+                                        <li class="no-bullet resume-li resume-container-skill-li">HTML5
+                                            <img class="resume-img-skills" src="images/html5.svg" alt="HTML5 logo">
+                                        </li>
+                                        <li class="no-bullet resume-li resume-container-skill-li">WordPress
+                                            <img class="resume-img-skills" src="images/wordpress.svg" alt="WordPress logo">
+                                        </li>
+                                        <li class="no-bullet resume-li resume-container-skill-li">CSS3
+                                            <img class="resume-img-skills" src="images/css3.svg" alt="CSS3 logo">
+                                        </li>
+                                        <li class="no-bullet resume-li resume-container-skill-li">Bootstrap
+                                            <img class="resume-img-skills" src="images/bootstrap.svg" alt="Bootstrap logo">
+                                        </li>
+                                        <li class="no-bullet resume-li resume-container-skill-li">JavaScript
+                                            <img class="resume-img-skills" src="images/javascript.svg" alt="JavaScript logo">
+                                        </li>
+                                        <li id="skill-font-li" class="no-bullet resume-li resume-container-skill-li">Adobe Creative Suite
+                                            <img class="resume-img-skills" src="images/adobe-cc.svg" alt="Adobe Creative Suite logo">
+                                        </li>
+                                    </ul> <!-- END - skills-cols - css grid -->
+
+                                </div> <!-- END resume-sections-rightcol - flex child 2 -->
+
+                            </div> <!-- end resume-sections-col-container for skills - flex parent -->
+
+                        </div> <!-- END Skills Section -->
+
+                        <div class="education"><!-- Education section -->
+
+                            <div class="resume-sections-col-container"> <!-- begin resume-sections-col-container for skills - flex parent -->
+
+                                <div class="resume-sections-leftcol"> <!-- resume-sections-leftcol - flex child 1 -->
+
+                                    <div class="resume-container-h3-headings"> <!-- resume-container-h3-headings - flex parent-->
+                                        <img class="resume-img-headings" src="images/graduation-cap.svg" alt="graduation cap icon"> <!-- resume-img-headings - flex child 1 -->
+                                        <h3>Education</h3> <!-- h3 - flex child 2 -->
+                                    </div> <!-- END resume-container-h3-headings - flex parent -->
+
+                                </div> <!-- END resume-sections-leftcol - flex child 1 -->
+
+                                <div class="resume-sections-rightcol"> <!-- resume-sections-rightcol - flex child 2 -->
+
+                                    <div class="div-vertline-3lines spacer-education"> <!-- div-vertline-3lines - flexbox parent -->
+                                        <div class="vertical-line"></div> <!-- vertical-line - flex child 1 -->
+                                        <ul> <!-- UL - flex child 2 -->
+                                            <li class="no-bullet resume-li">Wake Technical Community College - Raleigh, NC</li>
+                                            <li class="no-bullet resume-li">Web Developer AAS Degree, 2019 - present</li>
+                                        </ul>
+                                    </div> <!-- END div-vertline-3lines - flexbox parent -->
+                                    <div class="div-vertline-3lines"> <!-- div-vertline-3lines - flexbox parent -->
+                                        <div class="vertical-line"></div> <!-- vertical-line - flex child 1 -->
+                                        <ul> <!-- UL - flex child 2 -->
+                                            <li class="no-bullet resume-li">University of North Carolina at Greensboro - Greensboro, NC</li>
+                                            <li class="no-bullet resume-li">Bachelor of Science with Honors</li>
+                                            <li class="no-bullet resume-li">Elementary Education and Special Education Dual Major</li>
+                                        </ul>
+                                    </div> <!-- END div-vertline-3lines - flexbox parent -->
+
+                                </div> <!-- END resume-sections-rightcol - flex child 2 -->
+
+                            </div> <!-- end resume-sections-col-container for skills - flex parent -->
+
+                        </div><!-- END Education section -->
+
+                        <!-- Download Resume Section -->
+                        <div class="downloads">  <!-- begin downloads section -->
+
+                            <div class="resume-sections-col-container"> <!-- begin resume-sections-col-container for skills - flex parent -->
+
+                                <div class="resume-sections-leftcol">  <!-- begin resume-sections-leftcol - flex child 1 -->
+
+                                    <div class="resume-container-h3-headings"> <!-- begin flex parent - resume-container-h3-headings -->
+                                        <img id="resume-download-arrow" src="images/download.svg" alt="download arrow">
+                                        <h3 id="h3-download-fix">Download My Resume!</h3>
+                                    </div> <!-- end flex parent - resume-container-h3-headings -->
+
+                                </div> <!-- end resume-sections-leftcol - flex child 1 -->
+
+                                <div class="resume-sections-rightcol"> <!-- resume-sections-rightcol - flex child 2 -->
+
+                                    <div class="resume-download-div"> <!-- begin flex parent - resume-download-div -->
+                                        <a class="resume-download-a" href="downloads/jennifer_gregory_resume.pdf" download="some_name" target="_blank">Download PDF
+                                            <img class="resume-download-img" src="images/pdf.svg" alt="pdf icon">
+                                        </a>
+                                        <a id="resume-download-a-docx" class="resume-download-a" href="downloads/jennifer_gregory_resume.docx" download>Download DOCX
+                                            <img class="resume-download-img" src="images/docx.svg" alt="docx icon">
+                                        </a>
+                                        <a class="resume-download-a" href="downloads/jennifer_gregory_resume.rtf" download>Download RTF
+                                            <img class="resume-download-img" src="images/rtf.svg" alt="rtf icon">
+                                        </a>
+                                    </div> <!-- end flex parent - resume-download-div -->
+
+                                </div> <!-- END resume-sections-rightcol - flex child 2 -->
+
+                            </div> <!-- end resume-sections-col-container for skills - flex parent -->
+
+                        </div>  <!-- end downloads section -->
+
+                    </section><!-- END Resume Section -->   
+
+                </div> <!-- END resume-text-wrapper-->
+
+            </div> <!-- END resume-section-wrapper-->
+
+            <div class="blog-container"><!-- * Blog Section -->
+                <section id="blog"> 
+                    <a id="blog-link"></a>
+                    <h2>Featured Blog Posts</h2>
+                    <div class="blog-card-container"> <!-- blog cards CSS grid container -->
+                        <div id="blog-card-1" class="blog-card">
+                            <h3 class="blog-heading">Do Duplicate Links Help or Hurt?</h3>
+                            <p class="blog-paragraph">In her article for Nielsen Norman Group, Hoa Loranger addresses whether duplicate links help or hurt a websites’ users. She discusses several reasons why designers use duplicate links. Duplicate links provide safety nets for users, create visual balance, and keep users from needing to scroll on long pages...</p>
+                            <a class="read-more" href="https://jenninnc.wordpress.com/2022/02/14/do-duplicate-links-help-or-hurt/" target="_blank">Read More
+                            </a>
+                        </div>
+                        <div id="blog-card-2" class="blog-card">
+                            <h3 class="blog-heading">Visual Hierarchy & the Squint Test</h3>
+                            <p class="blog-paragraph">This article, “Visual Hierarchy in UX/UI Design” by UI Blogger discusses how visual hierarchy is used in user interface design to direct a viewer’s attention. Visual hierarchy is created using 1) color and contrast, (2) scale, and (3) grouping.The article also discusses an interesting method of assessing the hierarchy of...</p>
+                            <a class="read-more" href="https://jenninnc.wordpress.com/2022/01/20/visual-hierarchy-and-the-squint-test/" target="_blank">Read More
+                            </a>
+                        </div>
+                        <div id="blog-card-3" class="blog-card">
+                            <h3 class="blog-heading">Slideshows and Carousels: Are They Good Web Design?</h3>
+                            <p class="blog-paragraph">Slideshows, also called carousels or slides, have been a popular trend in web design for quite a while. The ability to showcase multiple large images within a single space seems like the perfect answer to limited space on web pages. However, research...</p>
+                            <a class="read-more" href="https://jenninnc.wordpress.com/2022/01/13/slideshows-and-carousels-are-they-good-web-design/" target="_blank">Read More
+                            </a>
+                        </div>
+                    </div><!-- END blog cards CSS grid container -->
+                </section><!-- END Blog Section -->
+            </div>
+
+        </main><!-- END MAIN -->
+
+        <footer><!-- * FOOTER -->
+            <div class="footer-container">
+                <div class="footer-div-back2top">
+                    <a class="footer-a-back2top" href="#main-navigation"> <!-- on mobile, displays back to top button in footer -->
+                        <img id="up-arrow-mobile" src="images/up-arrow.svg" alt="arrow pointing up">Back to Top
+                    </a>
+                    <p class="footer-p-text">Site design by Jennifer Gregory. Icons by
+                        <a class="footer-a" target="_blank" href="https://icons8.com">Icons8</a>
+                        and
+                        <a class="footer-a" target="_blank" href="https://thenounproject.com/">Noun Project</a>
+                        and
+                        <a class="footer-a" target="_blank" href="https://getbootstrap.com/">Bootstrap</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </footer><!-- END FOOTER -->
+
+    </body>
+
+</html>

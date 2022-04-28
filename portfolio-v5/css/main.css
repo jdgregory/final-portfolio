@@ -1,0 +1,465 @@
+/* main.css */
+/*  Site Colors:
+    Accent colors:
+    #6200b3 - purple (footer, contact form field border, gradient background, etc)
+    #b43e8f - fandango (hover, gradient background, etc)
+    #3626a7 - blue pantone ("view full project link," gradient background, etc)
+    Text/Background Colors:
+    #0f0f10 - rich black FOGRA 39 (body)
+    #1d1d20 - eerie black (color for background sections with text, nav, about section background)
+    #ffffff - white (body text, nav text)
+
+    used download buttons:
+    #44444b - dark liver
+    #3a3a40- onyx
+    #575760 - davys grey
+
+    Site Fonts:
+    Navigation - font-family: 'Open Sans', sans-serif;
+    Headings - font-family: 'Catamaran', sans-serif;
+    Body, p -  font-family: 'Open Sans', sans-serif;
+ */
+/* ===============
+   * GLOBAL STYLES 
+   =============== */
+* {                                         /* Clears browsers' default margin and padding values */
+    padding: 0;
+    margin: 0;
+}  
+html {                                      /* Sets default font size to 16px */
+    font-size: 16px;
+    height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* ===============
+   * UTILITY CLASSES 
+   =============== */
+.no-bullet {
+    list-style-type: none;
+}
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.block {
+    display: block;
+}
+/* ===============
+    * WRAPPERS
+   =============== */
+    /* ! Empty */
+
+/* ===============
+    * BUTTONS
+   =============== */
+/* Submit Button in Contact Section */
+.button {
+	box-shadow: 0 0.625rem 0.875rem -0.438rem #6200b3;
+	background:linear-gradient(to bottom, #6200b3 5%, #7000cc 100%);
+	background-color:#6200b3;
+	border-radius:0.5rem;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.125rem;
+	font-weight:bold;
+	padding: 0.813rem 2rem;
+	text-decoration:none;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #7000cc 5%, #6200b3 100%);
+	background-color:#7000cc;
+}
+.button:active {
+	position:relative;
+	top: 0.063rem;
+}
+
+
+/* ===============
+   * FONT STYLES
+   =============== */
+/* For mobile navigation font size & weight, see navigation.css */
+/****** Font Family *******/
+h1, h2, h3, h4 {
+    font-family: 'Catamaran', sans-serif;
+}
+p, body {
+    font-family: 'Open Sans', sans-serif;
+}
+/* Navigation Font Family*/
+.primary-navigation {         
+    font-family: 'Open Sans', sans-serif; /* font-family - navigation font family */
+}
+
+/****** Font Size, Weight, Letter-Spacing *******/
+h1, h2 {
+    font-size: 1.875rem;    /* Main headings - 30px for devices under 576px */
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.438rem;    /* Subheadings - 23px for devices under 576px */  
+}
+
+/****** Font Size, Weight Changes for Sections *******/
+/****** Navigation *******/
+/* Navigation Font Size (not mobile. see navigation.css for mobile sizes/weight)*/
+.primary-navigation {
+    font-weight: 400;           
+}
+/****** Projects Section *******/
+.project-text-heading {             /* project headings are h3s and are 23 px at 576px (and below) screen sizes */
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/****** Contact Section *******/
+/* TODO: create uniform font-sizes for buttons */
+.contact-button {                                   /* button for contact form */
+    font-size: 1.125rem;                            /* button text is 18px */
+}
+.contact-leftcol-a {
+    font-size: 0.9rem;
+}
+/****** Footer Section *******/
+.footer-p-text {                                   /* button for contact form */
+    font-size: 0.875rem;                            /* button text is 18px */
+}
+/* ===============
+   * LINK STATES
+   =============== */
+/* Navigation Link States */
+a.primary-navigation-a:link {        /* unvisited link has white text */
+    color: #ffffff;
+    text-decoration: none;
+}
+a.primary-navigation-a:visited {     /* unvisited link has white text */
+    color: #ffffff;
+}
+a.primary-navigation-a:focus {
+    border-bottom: 3px solid white;
+}
+a.primary-navigation-a:hover { 
+    border-bottom: 3px solid #b43e8f;
+}
+a.primary-navigation-a:active {
+    color: #b43e8f;
+}
+
+/* Projects Section "View Full Website" Link States */
+a.open-link:link {       
+    border-bottom: 3px solid #3626a7;
+    text-decoration: none;                   
+    color: #3626a7;
+}
+a.open-link:visited {     
+    color: #3626a7;
+}
+a.open-link:focus {
+    border-bottom: 3px solid black;
+}
+a.open-link:hover { 
+    border-bottom: none;
+}
+
+/* Resume - Downloads Subsection Links */
+
+.resume-download-a {
+    background-color: #44444B;
+    border: 1px solid #3A3A40;
+    text-decoration: none;
+    color: #ffffff;
+}
+a.resume-download-a:hover {
+    background-color: #575760;
+
+}
+
+/* Contact-Link, Contact-leftcol, footer-a-back2top Class Link States */
+a.contact-link:link, a.contact-leftcol-a:link, a.footer-a-back2top:link  {       
+    text-decoration: none;                   
+    color: #ffffff;
+}
+a.contact-link:visited, a.contact-leftcol-a:visited, a.footer-a-back2top:visited {     
+    color: #ffffff;
+}
+a.contact-link:hover, a.contact-leftcol-a:hover  { 
+    color: #0f0f10;
+}
+/* Footer Link States */
+a.footer-a:link {       
+    border-bottom: 1px solid #ffffff;
+    text-decoration: none;                   
+}
+a.footer-a:visited {     
+    color: #ffffff;
+}
+a.footer-a:focus {
+    border-bottom: 3px solid #ffffff;
+}
+a.footer-a:hover { 
+    border-bottom: none;
+}
+
+/* ===============
+    * COLOR STYLES 
+   =============== */
+/* NOTE: Navigation for screens 992px and below- see navigation.css (all other colors in main.css)  */
+body {
+    background-color: #0f0f10;
+    color: #ffffff;
+}
+
+/* Navigation */
+header {
+    background-color: #1d1d20;
+}
+nav {
+    background-color: #1d1d20;
+}
+
+/* About Section */
+#about {
+    background-color: #1d1d20;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #ffffff;
+    color: #1d1d20
+}
+.project-text-container {   
+    color: #1d1d20; 
+}
+
+/* Contact Section */
+.contact-right-column{
+    background-color: #ffffff;
+    color: #1d1d20; 
+}
+.contact-label {
+    color: #6200b3;
+}
+label[class="block"] {
+    color: #6200b3;
+}
+.contact-input {
+    border-color: #6200b3;
+    background-color: rgba(98, 0, 179, 0.1);
+    border-style: solid;  
+}
+textarea {
+    border-color: #6200b3;
+    background-color: rgba(98, 0, 179, 0.1);
+    border-style: solid;
+}
+.contact-button {                                   /* button for contact form */
+    background-color: #3626a7;
+    color: #ffffff;
+}
+
+/* Resume Section */
+.resume-section-wrapper {
+    background-color: #1d1d20;
+}
+
+/* Footer Section */
+footer {
+    background-color: #6200b3;
+}
+
+/* ===============
+   * shape-divider-top-1 (bottom of About section)
+   =============== */
+   .shape-divider-top-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.shape-divider-top-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 40px;
+}
+.shape-divider-top-1 .shape-fill {
+    fill: #0F0F10;
+}
+/* ===============
+   * shape-divider-top-2 (bottom of projects section)
+   =============== */
+.shape-divider-top-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateY(2px) rotate(180deg); /* translateY used to eliminate gap between svg and contact section */
+}
+.shape-divider-top-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 40px;
+}
+.shape-divider-top-2 .shape-fill {
+    fill: #0F0F10;
+}
+
+/* *=================================================================================================================================================================  */
+
+/* ===============
+   * Breakpoints
+   =============== */
+/* **Breakpoint 1** */
+/* Small devices (landscape phones, 576px and up) [between 576-767 pixels] */
+   @media (min-width: 576px) {
+
+    /****** BP1 Shape Dividers *******/
+    /* shape-divider-top-1 & shape-divider-top-2 */
+    .shape-divider-top-1 svg, .shape-divider-top-2 svg {
+        height: 45px;
+    }
+    /****** BP1 Font Size, Weight, Letter-Spacing *******/
+    h1, h2 {
+        font-size: 1.938rem;                /* Main headings - 31px for devices under 767px */
+    }
+    h3 {
+        font-size: 1.5rem;                  /* Subheadings - 24px for devices under 767px */  
+    }
+    .primary-navigation,                    /* font-size for navigation 993 and up */
+    .resume-li,
+    .project-text,
+    .view-link-container,
+    .contact-left-column,
+    .contact-right-column,
+    .contact-input,
+    textarea,
+    p {font-size: 1.063rem;}                /* p, textarea, etc - 17px for devices under 767px */
+
+} /* *end breakpoint 1 */
+
+/* **Breakpoint 2** */   
+/* Medium devices (tablets, 768px and up) [between 768-991 pixels] */
+   @media (min-width: 768px) {
+
+    /****** BP2 Shape Dividers *******/
+    /* shape-divider-top-1 */
+    .shape-divider-top-1 svg, .shape-divider-top-2 svg {
+        height: 50px;
+    }
+    /****** BP2 Font Size, Weight, Letter-Spacing *******/
+    h1, h2 {
+        font-size: 2rem;            /* Main headings - 32px for devices under 991px */
+    }
+    h3 {
+        font-size: 1.563rem;        /* Subheadings - 25px for devices under 991px */  
+    }
+    .primary-navigation,           /* font-size for navigation 993 and up */
+    .resume-li,
+    .project-text,
+    .view-link-container,
+    .contact-left-column,
+    .contact-right-column,
+    .contact-input,
+    textarea,
+    p {font-size: 1.125rem;}        /* p, textarea, etc - 18px for devices under 991px */
+  
+} /* *end breakpoint 2 */
+
+/* **Breakpoint 3** */     
+/* Large devices (desktops, 992px and up) [between 992-1199 pixels] */
+   @media (min-width: 992px) {
+
+    /****** BP3 Shape Dividers *******/
+    /* shape-divider-top-1 */
+    .shape-divider-top-1 svg, .shape-divider-top-2 svg {
+        height: 55px;
+    }
+    /****** BP3 Font Size, Weight, Letter-Spacing *******/
+    h1, h2 {
+        font-size: 2.063rem;        /* Main headings - 33px for devices under 1199px */
+    }
+    h3 {
+        font-size: 1.625rem;        /* Subheadings - 26px for devices under 1199px */  
+    }
+    .primary-navigation,            /* font-size for navigation 993 and up */
+    .resume-li,
+    .project-text,
+    .view-link-container,
+    .contact-left-column,
+    .contact-right-column,
+    .contact-input,
+    textarea,
+    p {font-size: 1.188rem;} 	   /* p, textarea, etc - 19px for devices under 1199px */
+    
+
+} /* *end breakpoint 3 */
+
+/* **Breakpoint 4** */  
+/* X-Large devices (large desktops, 1200px and up) [between 1200-1399 pixels] */
+   @media (min-width: 1200px) {
+
+    /****** BP4 Shape Dividers *******/
+    /* shape-divider-top-1 */
+    .shape-divider-top-1 svg, .shape-divider-top-2 svg {
+        height: 60px;
+    }
+    /****** BP4 Font Size, Weight, Letter-Spacing *******/
+    h1, h2 {
+        font-size: 2.125rem;        /* Main headings - 34px for devices under 1399px */
+    }
+    h3 {
+        font-size: 1.688rem;        /* Subheadings - 27px for devices under 1399px */  
+    }
+    .primary-navigation,            /* font-size for navigation 993 and up */
+    .resume-li,
+    .project-text,
+    .view-link-container,
+    .contact-left-column,
+    .contact-right-column,
+    .contact-input,
+    textarea,
+    p {font-size: 1.25rem;} 	   /* p, textarea, etc - 20px for devices under 1399px */
+    
+
+} /* *end breakpoint 4 */
+
+/* **Breakpoint 5** */     
+/* XX-Large devices (larger desktops, 1400px and up) */
+   @media (min-width: 1400px) {
+
+    /****** BP5 Shape Dividers *******/
+    /* shape-divider-top-1 */
+    .shape-divider-top-1 svg, .shape-divider-top-2 svg {
+        height: 65px;
+    }
+    /****** BP5 Font Size, Weight, Letter-Spacing *******/
+    h1, h2 {
+        font-size: 2.188rem;        /* Main headings - 35px for devices 1400px and up */
+    }
+    h3 {
+        font-size: 1.75rem;         /* Subheadings - 28px for devices 1400px and up */  
+    }
+    .primary-navigation,            /* font-size for navigation 993 and up */
+    .resume-li,
+    .project-text,
+    .view-link-container,
+    .contact-left-column,
+    .contact-right-column,
+    .contact-input,
+    textarea,
+    p {font-size: 1.313rem;} 	   /* p, textarea, etc - 21px for devices 1400px and up */
+    
+
+} /* *end breakpoint 5 */
